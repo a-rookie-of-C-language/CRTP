@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/javaCRTP.iml" filepath="$PROJECT_DIR$/javaCRTP.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/C++CRTP.iml" filepath="$PROJECT_DIR$/.idea/C++CRTP.iml" />
+>>>>>>> 1443470d42d6e4f56824aab4208c61014ac667ec
+    </modules>
+  </component>
+</project>
