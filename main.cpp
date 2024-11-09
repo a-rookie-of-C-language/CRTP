@@ -4,16 +4,16 @@
 // 基类
 class Base {
 public:
-    virtual void print() {
+    virtual  void print() {
         std::cout << "Base class" << std::endl;
     }
-    virtual ~Base()= default;
+    //virtual ~Base()= default;
 };
 
 // 派生类
 class Derived : public Base {
 public:
-    void print() override {
+    void print() {
         std::cout << "Derived class" << std::endl;
     }
 };
@@ -28,8 +28,7 @@ public:
 };
 
 // CRTP派生类
-template <typename Base>
-class CRTPDerived : public CRTPBase<CRTPDerived<Base>> {
+class CRTPDerived : public CRTPBase<CRTPDerived> {
 public:
     void print() {
         std::cout << "CRTPDerived class" << std::endl;
@@ -38,7 +37,7 @@ public:
 
 int main() {
     Base* b = new Derived();
-    auto* crtp = new CRTPDerived<Base>();
+    CRTPBase<CRTPDerived> * crtp = new CRTPDerived();
 
     // 测量多态的时间
     auto start = std::chrono::high_resolution_clock::now();
